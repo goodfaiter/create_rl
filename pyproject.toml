@@ -1,5 +1,5 @@
 [project]
-name = "gen_rl"
+name = "create_rl"
 version = "0.0.1"
 license = { file = "LICENSE" }
 authors = [
@@ -46,4 +46,4 @@ mujoco-warp = { git = "https://github.com/google-deepmind/mujoco_warp", rev = "9
 mjlab = { workspace = true }
 
 [project.entry-points."mjlab.tasks"]
-gen_rl = "gen_rl"
+create_rl = "create_rl"

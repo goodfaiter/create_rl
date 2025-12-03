@@ -19,7 +19,7 @@ from mjlab.viewer import ViewerConfig
 from mjlab.rl import RslRlOnPolicyRunnerCfg
 from mjlab.envs import mdp
 
-from gen_rl.robots.cartpole.cartpole_constants import get_cartpole_robot_cfg
+from create_rl.robots.cartpole.cartpole_constants import get_cartpole_robot_cfg
 
 
 SCENE_CFG = SceneCfg(

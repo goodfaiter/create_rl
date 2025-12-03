@@ -6,7 +6,7 @@ Ensure you have docker, docker compose and docker-nivida-toolkit installed.
 
 ```
 docker compose up dev -d
-docker exec -it gen_rl-dev-1 bash
+docker exec -it create_rl-dev-1 bash
 ```
 
 You can also set up VSCode to now work within this container.
@@ -16,9 +16,12 @@ Not tested as much, may lack some system dependecies that come with Docker base 
 
 ```
 uv venv --python 3.12 --seed
-uv pip install -e gen_rl
+uv pip install -e create_rl
 ```
 
 ## FAQ
 ### Why are there X11 forwarding in the `docker-compose`?
 We need those to see the visualization inside docker. This is not needed for the web-based GUI.
+
+### Why do I visualize with mujoco native player and not the web GUI?
+The way mjlab works is that it checks for DISPLAY environment variable and decides if it should use the native player or web gui.
