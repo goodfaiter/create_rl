@@ -1,0 +1,6 @@
+[submodule "tools/rsl_rl"]
+	path = tools/rsl_rl
+	url = git@github.com:goodfaiter/rsl_rl.git
+[submodule "tools/mjlab"]
+	path = tools/mjlab
+	url = https://github.com/mujocolab/mjlab.git

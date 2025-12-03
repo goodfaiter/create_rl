@@ -10,7 +10,7 @@ maintainers = [
 ]
 description = "Generative Design using Reinforcement Learning."
 readme = "README.md"
-requires-python = ">=3.10"
+requires-python = ">=3.12"
 classifiers = [
     # How mature is this project? Common values are
     #   3 - Alpha
@@ -22,13 +22,28 @@ classifiers = [
     # Pick your license as you wish (see also "license" above)
     "License :: OSI Approved :: MIT License",
     # Specify the Python versions you support here.
-    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.12",
 ]
-dependencies = []
+dependencies = [
+    "mjlab",
+    "mujoco-warp",
+    "rsl-rl-lib",
+]
 
 [build-system]
 requires = ["uv_build>=0.8.19,<0.9.0"]
 build-backend = "uv_build"
+
+[tool.uv.workspace]
+members = [
+    "tools/rsl_rl",
+    "tools/mjlab",
+]
+
+[tool.uv.sources]
+rsl-rl-lib = { workspace = true }
+mujoco-warp = { git = "https://github.com/google-deepmind/mujoco_warp", rev = "9fc294d86955a303619a254cefae809a41adb274" }
+mjlab = { workspace = true }
 
 [project.entry-points."mjlab.tasks"]
 gen_rl = "gen_rl"
