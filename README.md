@@ -1,6 +1,12 @@
 # create_rl
 Generative Design using Reinforcement Learning
 
+## Initialize the submodules
+```
+cd create_rl
+git submodule update --init --recursive
+```
+
 ## Installation/Running with Docker
 Ensure you have docker, docker compose and docker-nivida-toolkit installed.
 
